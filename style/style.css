@@ -42,19 +42,24 @@ body {
 
 
 button {
-  margin: 50px 20px;
+  margin: 30px 20px;
   font-weight: bold;
   font-size: 24px;
   color: #2e3440;
   border: 0;
   cursor: pointer;
   padding: 8px 16px;
+  height: 100px;
   background-color: #D08770;
   border-radius: 24px;
 }
 
 
+#start{
+  height: auto;
+}
 #no-catch {
+  height: auto;
   margin: 0 20px;
   background-color: #BF616A;
 
