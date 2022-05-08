@@ -145,11 +145,11 @@ noCatch.onclick = function(){
 speedBtn.onclick = function (){
   lastSpeed = speed;
   if (speed === 'min'){
-    speed = prompt("Повысим сложность? на mid или max ", ["mid"]);
+    speed = prompt("Raise the difficulty? to mid or max ", ["mid"]);
   }else if (speed === 'mid'){
-      speed = prompt("Повысим сложность? на max ", ["max"]);
+      speed = prompt("Raise the difficulty? to max ", ["max"]);
   }else if (speed === 'max'){
-    speed = prompt("Устали? Поменяйте скорость на min или mid", ["min"]);
+    speed = prompt("Tired? Change speed to min or mid", ["min"]);
   }
   if (speed === 'min' || speed === 'mid'|| speed === 'max'){
     spanValue()
