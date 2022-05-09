@@ -1,5 +1,5 @@
 # RunAwayButton-V2
-
+<a href='https://denisgas.github.io/RunAwayButton-V2/'>Game page</a>
 ## Game rule
 
 After pressing the start button, you start the game from score 0 and speed min.
