@@ -1,4 +1,4 @@
-# RunAwayButton
+# RunAwayButton-V2
 
 ## Game rule
 
