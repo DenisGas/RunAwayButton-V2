@@ -22,8 +22,9 @@ let maxScore = 0;//Amount click on noCatch button on maxSpeed
 let i = 0; // Just index for change btn position noCatch button
 let index = 0; // Just index for change colors in noCatch button and scoreBtn
 
-// launch animation Game start 
+//launch animation Game start 
 startGame()
+//Animation Game start 
 function startGame(){
   setTimeout(() => {
       gameStart.style.opacity = 1;
@@ -36,6 +37,7 @@ function getRandomInt(min, max) {
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min;
 };
+//Button speed change
 function btnSpeeds() {
     if (speed === "min"){
       btnSpeed = "0.8s"
@@ -52,10 +54,12 @@ function btnSpeeds() {
       speed = lastSpeed
     }
 };
+//Enters speed and score values
 function spanValue(){
   speedSpan.innerHTML = speed;
   clickScoreSpan.innerHTML = score;
 };
+//Animation button "Score"
 function scoreBtnAnimation(){
   scoreBtn.style.backgroundColor = colors[index];
   scoreBtn.style.transition = '0.5s' ;
@@ -70,6 +74,7 @@ function scoreBtnAnimation(){
       scoreBtn.style.transition = '0.5s' ;
     }, 500);
 };
+//Random button "noCatch" movement
 function randomMove(){
     let x = getRandomInt(50, 90);
     if (speed === 'min' || speed === 'mid' || speed === 'max'){
@@ -103,6 +108,7 @@ function randomMove(){
     }
 
 };
+//Animation after pressing the "Start" button
 function startAnimation(){
   start.style.opacity = '0';
   start.style.transition = '0.5s' ;
@@ -116,10 +122,12 @@ function startAnimation(){
     }, 500);
 
 };
+//Function call after pressing the "Start" button 
 startBtn.onclick = function (){
   startAnimation()
   spanValue()
 };
+//Function call after hover the "noCatch" button and change bg-color, btnSpeed;
 noCatch.onmouseover = function(){
   btnSpeeds()
   randomMove()
@@ -128,6 +136,7 @@ noCatch.onmouseover = function(){
   noCatch.style.color = '#2e3440';
   noCatch.style.transition = btnSpeed;
 };
+// After pressing the "noCatch" button 
 noCatch.onclick = function(){
   if (speed === "min"){
       minScore += 1;
@@ -142,8 +151,9 @@ noCatch.onclick = function(){
   spanValue();
   scoreBtnAnimation();
 };
+//After pressing the "speed" button check the speed and its change
 speedBtn.onclick = function (){
-  lastSpeed = speed;
+  lastSpeed = speed; 
   if (speed === 'min'){
     speed = prompt("Raise the difficulty? to mid or max ", ["mid"]);
   }else if (speed === 'mid'){
@@ -158,6 +168,7 @@ speedBtn.onclick = function (){
   }
 
 };
+//Message after pressing the "score" button 
 scoreBtn.onclick = function (){
   alert("You score: " + score+"\nTimes passed speed min: "+minScore+"\nTimes passed speed mid: "+midScore+"\nTimes passed speed max: "+maxScore)
   spanValue()
